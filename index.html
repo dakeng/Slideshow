@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>轮播图SlideShow</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="styles/slideshow.css">
+</head>
+<body>
+	
+	<div class="container">
+		<div id="slideshow" class="center">
+			<i class=" arrows arrows-left"></i>
+			<i class=" arrows arrows-right"></i>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="scripts/slideshow.js"></script>
+	<script type="text/javascript">
+		var files = [
+			'images/1.jpg',
+			'images/2.jpg',
+			'images/3.jpg',
+			'images/4.jpg',
+		];
+		var e = document.getElementById('slideshow');
+	 	new Slideshow(files,e);
+	</script>
+</body>
+</html>
