@@ -77,7 +77,7 @@ Slideshow.prototype.bindEvent = function(){
 Slideshow.prototype.autoRoll = function(){
 	let intervalID = window.setInterval(() => {
 		this.rollR();
-	},5000);
+	},4000);
 
 	return this;
 }
