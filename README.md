@@ -1,4 +1,4 @@
-# Slideshow
+# 无限循环轮播组件 Slideshow
 
 <p>预览地址：https://codepen.io/0_0liyuan/live/jLegdM
 <p>基于原生js的轮播组件</br>
