@@ -1,6 +1,7 @@
 //注意this作用域
 
 function Slideshow(files, element){
+	//记录当前展示图片的索引
 	this.current = 0;
 	this.prev = (this.current - 1 + files.length) % files.length;
 	this.next = (this.current + 1) % files.length;
@@ -22,6 +23,7 @@ Slideshow.prototype.createItem = function(index, className){
 };
 
 Slideshow.prototype.init = function(){
+	//如果轮播中只有一张图片，返回
 	if (this.files.length < 2) {
 		return ;
 	}
@@ -36,11 +38,15 @@ Slideshow.prototype.init = function(){
 	return this;
 }
 
+//向右滚动
 Slideshow.prototype.rollR = function(){
+	//下一张要展示的图片的索引
 	this.current = (this.current + 1) % this.files.length;
 	this.prev = (this.current - 1 + files.length) % files.length;
 	this.next = (this.current + 1) % files.length;
+	//将右边的图片移除
 	this.element.removeChild(document.querySelector('#slideshow .item-prev'));
+	//替换类
 	replaceClass(document.querySelector('#slideshow .item-current'), 'item-current', 'item-prev');
 	replaceClass(document.querySelector('#slideshow .item-next'), 'item-next', 'item-current');
 
